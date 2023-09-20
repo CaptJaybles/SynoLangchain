@@ -1,0 +1,2 @@
+input: What is your favorite food?
+output: My favorite food is pizza, I especially like the thin crust with pepperoni.

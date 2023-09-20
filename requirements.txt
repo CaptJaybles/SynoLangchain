@@ -1,0 +1,18 @@
+flask
+requests
+llama-cpp-python
+langchain[llm]
+wikipedia
+duckduckgo-search
+chromadb
+unstructured
+pypdf
+PyCryptodome
+spacy
+en_core_web_md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.6.0/en_core_web_md-3.6.0-py3-none-any.whl
+
+#pip uninstall -y llama-cpp-python
+#$Env:LLAMA_CUBLAS = "1"
+#$Env:FORCE_CMAKE = "1"
+#$Env:CMAKE_ARGS="-DLLAMA_CUBLAS=on"
+#pip install llama-cpp-python --no-cache-dir
