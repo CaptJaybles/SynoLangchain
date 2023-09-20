@@ -90,7 +90,7 @@ from langchain.vectorstores import Chroma
 from langchain.document_loaders import DirectoryLoader
 from langchain.document_loaders import TextLoader
 from langchain.document_loaders import PyPDFDirectoryLoader
-from langchain.text_splitter import SpacyTextSplitter
+from langchain.text_splitter import NLTKTextSplitter
 
 embeddings = SpacyEmbeddings()
 
@@ -108,7 +108,7 @@ class LoadCoreMemories():
     core_mem = mem_loader.load()
     txt_knowledge = txt_loader.load()
     pdf_knowledge = pdf_loader.load()
-    text_splitter = SpacyTextSplitter(chunk_size=1000)
+    text_splitter = NLTKTextSplitter(chunk_size=1000)
     knowledge_txt = text_splitter.split_documents(txt_knowledge)
 
     VECTORSTORE.add_documents(core_mem)
