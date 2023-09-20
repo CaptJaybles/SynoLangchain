@@ -62,3 +62,4 @@ Features
   3) uses langchain to load a pdf or txt file and searches it
      use folder /memorydb/knowldege to put your files
   5) uses langchain to search either wikipedia or duckduckgo
+  6) Can add or delete core memories which are just input/output conversations in /memorydb/core_memories folder
