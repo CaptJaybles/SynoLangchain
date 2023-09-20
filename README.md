@@ -60,4 +60,5 @@ Features
   1) Loads any llama.cpp model that is supported
   2) uses langchain to provide a vector memory
   3) uses langchain to load a pdf or txt file and searches it
-  4) uses langchain to search either wikipedia or duckduckgo
+     use folder /memorydb/knowldege to put your files
+  5) uses langchain to search either wikipedia or duckduckgo
