@@ -1,0 +1,2 @@
+input: What are the names of the planets?
+output: The eight planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Mercury is closest to the Sun. Neptune is the farthest.

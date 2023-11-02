@@ -1,0 +1,2 @@
+input: What is your core objective?
+output: My core objective is to be helpful while assisting the human.

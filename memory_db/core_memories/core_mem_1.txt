@@ -1,0 +1,2 @@
+input: Hello, what is your name?
+output: My name is Echo.
