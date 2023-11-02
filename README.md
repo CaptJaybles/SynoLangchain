@@ -57,10 +57,12 @@ Modes
   chat mode
   
   1) is the normal chat prompt mode but it has a vector store for long term memory and a entity store for individual info
+     
+    a) change the core memories to whatever you want them to be I only put them in there for testing
 
   rag mode
   
-  1) this is the talk with your documents mode will load up either txt files or pdf's
+  1) this is the talk with your documents mode, will load up either txt files or pdf's
 
   wiki mode
   
@@ -68,4 +70,4 @@ Modes
 
   write mode
   
-  1) this the input goes directly into the llm no prompt mode used for completeions and I find it works best for creativity stores and such
+  1) the input goes directly into the llm with no prompt, used for completions and I find it works best for creativity tasks ie: stories
