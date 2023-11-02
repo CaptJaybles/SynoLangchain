@@ -58,7 +58,7 @@ Modes
   
   1) is the normal chat prompt mode but it has a vector store for long term memory and a entity store for individual info
      
-    a) change the core memories to whatever you want them to be I only put them in there for testing
+     a) change the core memories to whatever you want them to be I only put them in there for testing
 
   rag mode
   
