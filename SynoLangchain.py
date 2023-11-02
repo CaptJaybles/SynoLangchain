@@ -142,7 +142,7 @@ def generate_response(message, user_id):
         else:
             def generate_message():
                 output = chat_chain.run(input=input_text)
-                send_back_message(user_id, str(output))
+                send_back_message(user_id, output)
                 ENTITY_STORE.save_to_file(file_path="./memory_db/Chroma/entity_memory")
             threading.Thread(target=generate_message).start()
             return "..."
@@ -167,7 +167,7 @@ def generate_response(message, user_id):
         else:
             def generate_message():
                 output = rag_chain.run(input=input_text)
-                send_back_message(user_id, str(output))
+                send_back_message(user_id, output)
             threading.Thread(target=generate_message).start()
             return "..."
 
@@ -193,7 +193,7 @@ def generate_response(message, user_id):
             def generate_message():
                 output_text = wiki_chain({"question": input_text, "chat_history": chat_history})
                 output=output_text['answer']
-                send_back_message(user_id, str(output))
+                send_back_message(user_id, output)
             threading.Thread(target=generate_message).start()
             return "..."
 
@@ -211,7 +211,7 @@ def generate_response(message, user_id):
                 global continue_text
                 output = llm(continue_text)
                 continue_text = output
-                send_back_message(user_id, str(output))
+                send_back_message(user_id, output)
             threading.Thread(target=generate_message).start()
             return "..."
 
@@ -224,7 +224,7 @@ def generate_response(message, user_id):
                 global continue_text
                 output = llm(input_text)
                 continue_text = output
-                send_back_message(user_id, str(output))
+                send_back_message(user_id, output)
             threading.Thread(target=generate_message).start()
             return "..."
 
@@ -248,8 +248,9 @@ def process_tasks():
         finally:
             task_queue.task_done()
 
+processing_thread = threading.Thread(target=process_tasks, daemon=True)
+processing_thread.start()
+
 if __name__ == '__main__':
     initialize_model()
-    processing_thread = threading.Thread(target=process_tasks, daemon=True)
-    processing_thread.start()
     app.run('0.0.0.0', port=FLASK_PORT, debug=False, threaded=True)
