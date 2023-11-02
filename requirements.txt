@@ -1,0 +1,10 @@
+flask
+requests
+llama-cpp-python
+langchain[llm]
+wikipedia
+chromadb
+unstructured
+pypdf
+PyCryptodome
+sentence-transformers
