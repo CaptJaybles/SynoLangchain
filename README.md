@@ -55,13 +55,17 @@ Commands
 Modes
 
   chat mode
+  
      1) is the normal chat prompt mode but it has a vector store for long term memory and a entity store for individual info
 
   rag mode
+  
     1) this is the talk with your documents mode will load up either txt files or pdf's
 
   wiki mode
+  
     1) this is the ask wikipedia anything mode and it will search wikipedia for an answer
 
   write mode
+  
     1) this the input goes directly into the llm no prompt mode used for completeions and I find it works best for creativity stores and such
